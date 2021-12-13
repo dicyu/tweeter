@@ -8,6 +8,7 @@ nav {
   font-family: 'Source Sans Pro', sans-serif;
   height: 120px;
   padding: 1.5em;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
