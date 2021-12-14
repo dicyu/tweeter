@@ -32,6 +32,9 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Character Limit Counter -->
+    <script src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -64,7 +67,7 @@
       <form action="/tweets/" method="POST">
         <label for="extra-text"><b>Or tell the world your inessential idea...</b></label>
         <textarea name="text" id="tweet-text" placeholder="This app won't judge you..."></textarea>
-          <button class="tweet-button" type="submit">Tweet</button>
+          <button id="tweet-button" type="submit">Tweet</button>
         <span class="counter">140</span>
       </form>
     </section>
