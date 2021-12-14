@@ -5,6 +5,7 @@ New-Tweet CSS
 .new-tweet {
   position: relative;
   width: 90%;
+  padding-bottom: 3em;
   display: flex;
   flex-direction: column;
 }

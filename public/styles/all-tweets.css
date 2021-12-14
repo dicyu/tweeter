@@ -1,0 +1,57 @@
+/* 
+All Tweets CSS
+*/
+
+.tweets {
+  width: 85%;
+  border: solid;
+  border-color: #000000;
+  border-bottom-left-radius: 30px 150px;
+  border-bottom-right-radius: 30px 150px;
+  padding: 1em;
+}
+
+section.tweets:hover {
+  box-shadow: 3px 7px 0px rgba(0,0,0,0.3);
+}
+
+article.header-tweets {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.tweets img {
+  height: 40px;
+  padding-right: 10px;
+}
+
+article.header-tweets span.handle  {
+  margin-left: auto;
+  color: #D3D3D3;
+}
+
+article.inner-tweets {
+  font-size: 17px;
+  border: #4f9ba9;
+  border-bottom-style: solid;
+}
+
+.tweets h4 {
+  margin: 0px;
+}
+
+.tweet-footer {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweets footer span i:hover {
+  opacity: 30%;
+}
