@@ -2,33 +2,39 @@
 All Tweets CSS
 */
 
+
 .tweets {
-  width: 85%;
+  width: 100%;
+}
+
+article.tweet {
   border: solid;
   border-color: #000000;
   border-bottom-left-radius: 30px 150px;
   border-bottom-right-radius: 30px 150px;
   padding: 1em;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-section.tweets:hover {
-  box-shadow: 3px 7px 0px rgba(0,0,0,0.3);
+article.tweet:hover {
+  box-shadow: 4px 7px 0px rgba(0,0,0,0.3);
 }
 
-article.header-tweets {
+article.tweet header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-bottom: 15px;
 }
 
-.tweets img {
-  height: 40px;
-  padding-right: 10px;
+article.tweet h4 {
+  margin-left: 10px;
 }
 
-article.header-tweets span.handle  {
-  margin-left: auto;
+article.tweet span.handle  {
   color: #D3D3D3;
+  margin-left: auto;
 }
 
 article.inner-tweets {
