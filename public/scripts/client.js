@@ -79,5 +79,34 @@ $(document).ready(function() {
     }
     tweetRendering(tweetData);
 
+    // To prevent the form from submitting normally
+    $('form').submit(function(event) {
+      event.preventDefault();
     });
+
+    
+    
+    $(function() {
+      const $button = $('#tweet-button');
+      
+      $button.on('click', function () {
+        let newTweet = $('textarea').serialize();
+        
+        console.log('Button clicked, performing ajax call...');
+        
+        $.ajax({
+          method: 'POST',
+          url: '/tweets',
+          data: newTweet
+        })
+        .then(function() {
+          $('textarea').val('');
+          console.log("it worked")
+        })
+        
+      });
+    });
+
+    });
+  
   
