@@ -2,7 +2,7 @@
 Header CSS
 */
 
-header {
+body > header {
   height: 400px;
   width: 100%;
   margin-top: 120px;
