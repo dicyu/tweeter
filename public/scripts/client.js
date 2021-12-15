@@ -77,7 +77,6 @@ $(document).ready(function() {
         $('.tweets').prepend($tweet);
       }
     }
-    tweetRendering(tweetData);
 
     // To prevent the form from submitting normally
     $('form').submit(function(event) {
@@ -94,11 +93,7 @@ $(document).ready(function() {
         
         console.log('Button clicked, performing ajax call...');
         
-        $.ajax({
-          method: 'POST',
-          url: '/tweets',
-          data: newTweet
-        })
+        $.post( '/tweets', newTweet )
         .then(function() {
           $('textarea').val('');
           console.log("it worked")
