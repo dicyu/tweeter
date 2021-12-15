@@ -6,41 +6,6 @@
 $(document).ready(function() {
 
   
-  const tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants."
-      },
-      "created_at": timeago.format(1461116232227)
-    },
-    {
-      "user": {
-        "name": "Bob",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@bobb" },
-        "content": {
-          "text": "Obi-Wan Kenobi was the strongest jedi. Don't @ me."
-        },
-        "created_at": timeago.format('2021-12-13')
-      },
-      {
-        "user": {
-          "name": "Steph",
-          "avatars": "https://i.imgur.com/nlhLi3I.png",
-          "handle": "@sssteph" },
-        "content": {
-          "text": "I am tired."
-        },
-        "created_at": timeago.format('2021-12-10')
-      }
-    ]
-    
     // Function to add a tweet into the database using append
     const createTweetElement = function(newTweet) {
       const $tweet = $('<article>').addClass("tweet");
@@ -78,6 +43,18 @@ $(document).ready(function() {
       }
     }
 
+    // Loading tweets, using ajax request to get our data from our file
+    const loadTweets = function() {
+      $.ajax('/tweets', { method: 'GET'})
+      .then(function (tweets) {
+        tweetRendering(tweets)
+        console.log('working?');
+      })
+    };
+    
+    loadTweets();
+
+
     // To prevent the form from submitting normally
     $('form').submit(function(event) {
       event.preventDefault();
@@ -93,7 +70,7 @@ $(document).ready(function() {
         
         console.log('Button clicked, performing ajax call...');
         
-        $.post( '/tweets', newTweet )
+        $.post('/tweets', newTweet )
         .then(function() {
           $('textarea').val('');
           console.log("it worked")
