@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-
   
     // Function to add a tweet into the database using append
     const createTweetElement = function(newTweet) {
@@ -13,28 +12,27 @@ $(document).ready(function() {
       // HTML container for the new tweet
       const tweetHTML = `
       <header>
-      <img src="${newTweet.user.avatars}">
-      <h4>${newTweet.user.name}</h4>
-      <span class="handle">
-      ${newTweet.user.handle}
-      </span>
+        <img src="${newTweet.user.avatars}">
+        <h4>${newTweet.user.name}</h4>
+        <span class="handle">${newTweet.user.handle}</span>
       </header>
       <article class="inner-tweets">
-      <p>${newTweet.content.text}</p>
+        <p>${newTweet.content.text}</p>
       </article>
       <footer class="tweet-footer">
-      ${newTweet['created_at']}
+        ${newTweet['created_at']}
       <span>
-      <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
       </span>
       </footer>`;
       
-      let myTweet = $tweet.append(tweetHTML);
-      return myTweet;
+      $tweet.append(tweetHTML);
+      return $tweet;
     }
     
+
     // Render the tweets in a loop so they can be posted to the webpage
     const tweetRendering = function(tweetArr) {
       for (const tweet of tweetArr) {
@@ -51,9 +49,7 @@ $(document).ready(function() {
         console.log('working?');
       })
     };
-    
     loadTweets();
-
 
     // To prevent the form from submitting normally
     $('form').submit(function(event) {
@@ -66,19 +62,34 @@ $(document).ready(function() {
       const $button = $('#tweet-button');
       
       $button.on('click', function () {
-        let newTweet = $('textarea').serialize();
-        
-        console.log('Button clicked, performing ajax call...');
-        
-        $.post('/tweets', newTweet )
-        .then(function() {
-          $('textarea').val('');
-          console.log("it worked")
-        })
+
+        const newTweet = $('textarea').serialize();
+        const newTweetLength = $('textarea').serialize().length;
+        const test = $('textarea').val();
+        const tweetLength = 140;
+
+        if (newTweetLength > tweetLength) {
+          alert('too long bro');
+        } else if (test === '') {
+          alert('nothing inside')
+        } else {
+
+          console.log(test);
+          console.log('Button clicked, performing ajax call...');
+          
+          $.post(
+            '/tweets', 
+            newTweet
+            )
+            .then(function() {
+              $('textarea').val('');
+              console.log("it worked")
+            })
+
+          }
         
       });
-    });
 
     });
-  
+});
   
