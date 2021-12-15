@@ -65,12 +65,12 @@ $(document).ready(function() {
 
         const newTweet = $('textarea').serialize();
         const newTweetLength = $('textarea').serialize().length;
-        const test = $('textarea').val();
+        const emptyTweet = $('textarea').val();
         const tweetLength = 140;
 
         if (newTweetLength > tweetLength) {
           alert('too long bro');
-        } else if (test === '') {
+        } else if (emptyTweet === '') {
           alert('nothing inside')
         } else {
 
