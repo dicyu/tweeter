@@ -74,7 +74,6 @@ $(document).ready(function() {
           alert('nothing inside')
         } else {
 
-          console.log(test);
           console.log('Button clicked, performing ajax call...');
           
           $.post(
@@ -83,6 +82,9 @@ $(document).ready(function() {
             )
             .then(function() {
               $('textarea').val('');
+              const $tweetContainer = $('.tweets');
+              $tweetContainer.empty();
+              loadTweets(newTweet);
               console.log("it worked")
             })
 
