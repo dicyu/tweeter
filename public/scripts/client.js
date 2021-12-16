@@ -5,8 +5,15 @@
  */
 $(document).ready(function() {
   
+    // Escape function to prevent scripts being passed in as a tweet
+    const escapeMe = function (str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     // Function to add a tweet into the database using append
-    const createTweetElement = function(newTweet) {
+      const createTweetElement = function(newTweet) {
       const $tweet = $('<article>').addClass("tweet");
       
       // HTML container for the new tweet
@@ -17,7 +24,7 @@ $(document).ready(function() {
         <span class="handle">${newTweet.user.handle}</span>
       </header>
       <article class="inner-tweets">
-        <p>${newTweet.content.text}</p>
+        <p>${escapeMe(newTweet.content.text)}</p>
       </article>
       <footer class="tweet-footer">
         ${newTweet['created_at']}
@@ -54,26 +61,17 @@ $(document).ready(function() {
     // To prevent the form from submitting normally
     $('form').submit(function(event) {
       event.preventDefault();
-    });
-
-    
-    
-    $(function() {
-      const $button = $('#tweet-button');
-      
-      $button.on('click', function () {
-
+        
         const newTweet = $('textarea').serialize();
         const newTweetLength = $('textarea').serialize().length;
         const emptyTweet = $('textarea').val();
         const tweetLength = 140;
-
+        
         if (newTweetLength > tweetLength) {
           alert('too long bro');
         } else if (emptyTweet === '') {
           alert('nothing inside')
         } else {
-
           console.log('Button clicked, performing ajax call...');
           
           $.post(
@@ -87,11 +85,9 @@ $(document).ready(function() {
               loadTweets(newTweet);
               console.log("it worked")
             })
-
+            
           }
-        
+          
+        });
       });
-
-    });
-});
   
