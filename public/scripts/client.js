@@ -92,10 +92,16 @@ $(document).ready(function() {
               $tweetContainer.empty();
               loadTweets(newTweet);
               console.log("it worked")
-            })
-            
+            }) 
           }
-          
         });
+
+        /* When clicking the arrow button, toggle the compose tweet away and scroll, when clicked again it will bring back the compose tweet */
+        $('.arrow-button').on('click', () => {
+          $('.new-tweet').slideToggle("slow");
+          $('html, body').animate({scrollTop: $('.new-tweet').offset().top - 220}, 'slow');
+          $('textarea').focus();
+        })
+
       });
   
