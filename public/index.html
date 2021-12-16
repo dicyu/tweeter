@@ -71,6 +71,11 @@
       <form action="/tweets/" method="POST">
         <label for="extra-text"><b>Or tell the world your inessential idea...</b></label>
         <textarea name="text" id="tweet-text" placeholder="This app won't judge you..."></textarea>
+        <h4 class=error-container>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span class="error"></span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </h4>
           <button id="tweet-button" type="submit">Tweet</button>
         <span class="counter">140</span>
       </form>

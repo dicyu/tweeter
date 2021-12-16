@@ -27,7 +27,7 @@ $(document).ready(function() {
         <p>${escapeMe(newTweet.content.text)}</p>
       </article>
       <footer class="tweet-footer">
-        ${newTweet['created_at']}
+        ${timeago.format(newTweet['created_at'])}
       <span>
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -58,6 +58,10 @@ $(document).ready(function() {
     };
     loadTweets();
 
+    // Error message hiding spot
+    const $errorMessage = $('form').children('h4');
+    $errorMessage.hide();
+
     // To prevent the form from submitting normally
     $('form').submit(function(event) {
       event.preventDefault();
@@ -68,9 +72,13 @@ $(document).ready(function() {
         const tweetLength = 140;
         
         if (newTweetLength > tweetLength) {
-          alert('too long bro');
+          $('.error').text('This tweet is too long. Your thoughts must be portrayed within 140 characters!');
+          $errorMessage.slideDown(600);
+          setTimeout(() => { $errorMessage.slideUp(600) }, 5000);
         } else if (emptyTweet === '') {
-          alert('nothing inside')
+          $('.error').text('Empty? Did you mis-click...you can\'t tweet a empty thought!');
+          $errorMessage.slideDown(600);
+          setTimeout(() => { $errorMessage.slideUp(600) }, 5000);
         } else {
           console.log('Button clicked, performing ajax call...');
           
