@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
   
     // Escape function to prevent scripts being passed in as a tweet
@@ -15,7 +16,7 @@ $(document).ready(function() {
     // Function to add a tweet into the database using append
       const createTweetElement = function(newTweet) {
       const $tweet = $('<article>').addClass("tweet");
-      
+
       // HTML container for the new tweet
       const tweetHTML = `
       <header>
@@ -53,7 +54,6 @@ $(document).ready(function() {
       $.ajax('/tweets', { method: 'GET'})
       .then(function (tweets) {
         tweetRendering(tweets)
-        console.log('working?');
       })
     };
     loadTweets();
@@ -80,18 +80,13 @@ $(document).ready(function() {
           $errorMessage.slideDown(600);
           setTimeout(() => { $errorMessage.slideUp(600) }, 5000);
         } else {
-          console.log('Button clicked, performing ajax call...');
-          
-          $.post(
-            '/tweets', 
-            newTweet
-            )
+          $.post('/tweets', newTweet)
             .then(function() {
               $('textarea').val('');
               const $tweetContainer = $('.tweets');
               $tweetContainer.empty();
               loadTweets(newTweet);
-              console.log("it worked")
+              $('.counter').text('140');
             }) 
           }
         });
