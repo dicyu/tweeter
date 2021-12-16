@@ -47,6 +47,10 @@ textarea::placeholder {
   margin-top: 15px;
 }
 
+#tweet-button:hover {
+  color: #FFC7C3;
+}
+
 span.counter {
   font-family: Bungee, sans-serif;
   font-size: 1.1em;
