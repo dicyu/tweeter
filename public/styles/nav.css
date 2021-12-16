@@ -30,7 +30,6 @@ nav {
   flex-direction: column;
 }
 
-
 .arrow-button {
   background-color: transparent;
   border-style: none;
@@ -39,17 +38,22 @@ nav {
 }
 
 nav i {
+  border: solid 0.5px #FFC7C3;
+  border-bottom-left-radius: 15px 30px;
+  border-bottom-right-radius: 15px 30px;
+  color: #FFFFFF;
+  width: 70px;
+  height: 28px;
   cursor: pointer;
-  animation: pulse 3s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   from { transform: scale(1); }
-  50% { transform: scale(0.85); }
+  50% { transform: scale(0.85); background-color: #FFC7C3}
   to { transform: scale(1); }
 }
 
-.arrow-button:hover {
-  animation: pulse 3s infinite;
+.fa-solid:hover {
+  animation-play-state: paused;
 }
-
