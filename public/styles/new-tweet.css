@@ -5,13 +5,14 @@ New-Tweet CSS
 .new-tweet {
   position: relative;
   width: 90%;
-  padding-bottom: 3em;
+  padding-top: 0.2em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
 }
 
 .new-tweet h2 {
-  font-size: 30px;
+  font-size: 1.2em;
 }
 
 label[for="extra-text"] {
