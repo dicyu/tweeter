@@ -57,5 +57,5 @@ article.inner-tweets {
 }
 
 .tweets footer span i:hover {
-  opacity: 30%;
+  color: #80c0cc;
 }
