@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Viewport -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -17,6 +20,7 @@
 
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/scroll-up-button.css" type="text/css" />
 
     <!-- Header CSS-->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -37,8 +41,9 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
 
-    <!-- Character Limit Counter -->
+    <!-- Composer JS -->
     <script src="/scripts/composer-char-counter.js"></script>
+    <script src="/scripts/composer-scroll.js"></script>
   </head>
 
   <body>
@@ -46,7 +51,7 @@
     <nav>
       <span id="logo">tweeter</span>
       <div id="newTweet-container">
-      <span><b>Write</b> a new tweet</span>
+        <span><b>Write</b> a new tweet</span>
         <button class="arrow-button" type="button">
         <i class="fa-solid fa-angles-down"></i>
       </button>
@@ -54,7 +59,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="theProfile">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -79,8 +84,10 @@
           <button id="tweet-button" type="submit">Tweet</button>
         <span class="counter">140</span>
       </form>
-      <section class="tweets"></section>
     </section>
+    <section class="tweets"></section>
+
+    
     </main>
 
   </body>

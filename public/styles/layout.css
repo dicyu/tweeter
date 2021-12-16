@@ -51,3 +51,24 @@ body {
   padding-right: 10px;
   padding-left: 10px;
 }
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  
+  header.theProfile {
+    width: 30%;
+    margin: 24vh 4% 0;
+    position: fixed;
+    float: left;
+  }
+
+  main {
+    width: 50%;
+    margin: 20vh 5% 0;
+    float: right;
+  }
+
+  article.tweet {
+    font-size: 1.5rem;
+  }
+}
