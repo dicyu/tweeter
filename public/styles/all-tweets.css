@@ -39,6 +39,7 @@ article.inner-tweets {
   font-size: 17px;
   border: #4f9ba9;
   border-bottom-style: solid;
+  overflow-wrap: break-word;
 }
 
 .tweets h4 {
