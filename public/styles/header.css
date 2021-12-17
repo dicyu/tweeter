@@ -19,3 +19,36 @@ Header CSS
 header h2 {
   color: #FFFFFF;
 }
+
+.fa-user-circle {
+  position: relative;
+  color: #FFFFFF;
+  bottom: 20px;
+  left: 8px;
+}
+
+.fa-user-circle:hover {
+  color: #FFC7C3;
+}
+
+.fa-at {
+  position: relative;
+  color: #FFFFFF;
+  bottom: 20px;
+  left: 43px;
+}
+
+.fa-at:hover {
+  color: #FFC7C3;
+}
+
+.fa-sign-out-alt {
+  position: relative;
+  color: #FFFFFF;
+  bottom: 20px;
+  left: 77px;
+}
+
+.fa-sign-out-alt:hover {
+  color: #FFC7C3;
+}
