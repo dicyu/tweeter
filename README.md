@@ -4,16 +4,22 @@ Tweeter is a simple, single-page Twitter clone that allows users to post a tweet
 
 ## Screenshots
 !["Screenshot of desktop view."](https://github.com/dicyu/tweeter/blob/master/docs/desktop-view.png)
+Screenshot of the desktop view.
 
 !["Screenshot of the desktop scroll button."](https://github.com/dicyu/tweeter/blob/master/docs/desktop-scroll.png)
+Screenshot of the desktop view with the scroll up button.
 
 !["Screenshot of the mobile view."](https://github.com/dicyu/tweeter/blob/master/docs/mobile-view.png)
+Screenshot of the mobile view.
 
 !["Screenshot of the compose toggle."](https://github.com/dicyu/tweeter/blob/master/docs/toggle-compose.png)
+Screenshot of the page with the compose tweet toggled off.
 
 !["Screenshot of an error message."](https://github.com/dicyu/tweeter/blob/master/docs/error-message.png)
+Screenshot of one of the error messages.
 
 !["Screenshot of the tweet hover shadows!](https://github.com/dicyu/tweeter/blob/master/docs/tweet-shadows.png)
+Screenshot of a tweet being hovered over giving it a shadow.
 
 ## Getting Started
 
