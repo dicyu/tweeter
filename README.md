@@ -45,6 +45,6 @@ Screenshot of a tweet being hovered over giving it a shadow.
 - Pulsing arrow button!
 
 ## Color Scheme
-- <span style="color:#FFC7C3">#FFC7C3 - Light red.
-- <span style="color:#4056a1">#4056A1 - Shade of blue.
-- <span style="color:#4F9BA9">#4F9BA9 - Shade of cyan.
+- <span style="color:#FFC7C3">#FFC7C3 - Light red.</span>
+- <span style="color:#4056a1">#4056A1 - Shade of blue.</span>
+- <span style="color:#4F9BA9">#4F9BA9 - Shade of cyan.</span>
