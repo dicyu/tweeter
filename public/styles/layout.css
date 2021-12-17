@@ -56,15 +56,15 @@ body {
 @media only screen and (min-width: 1024px) {
   
   header.theProfile {
-    width: 30%;
-    margin: 24vh 4% 0;
+    width: 35%;
+    height: 100%;
     position: fixed;
     float: left;
   }
 
   main {
-    width: 50%;
-    margin: 20vh 5% 0;
+    width: 55%;
+    margin: 15vh 5% 0;
     float: right;
   }
 
