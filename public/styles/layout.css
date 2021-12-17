@@ -52,7 +52,7 @@ body {
   padding-left: 10px;
 }
 
-/* Desktop Styles */
+/* Desktop CSS Style */
 @media only screen and (min-width: 1024px) {
   
   header.theProfile {
