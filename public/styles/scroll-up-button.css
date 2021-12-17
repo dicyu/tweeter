@@ -1,0 +1,20 @@
+/*
+Scroll Up Button CSS
+*/
+
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-color: transparent;
+  background-color: transparent;
+  color: #4056a1;
+  outline: none;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-up:hover {
+  color: #80c0cc;
+  transition: background-color 0.3s ease;
+}
