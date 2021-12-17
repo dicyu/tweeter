@@ -67,16 +67,15 @@ $(document).ready(function() {
       event.preventDefault();
         
         const newTweet = $('textarea').serialize();
-        const newTweetLength = $('textarea').serialize().length;
-        const emptyTweet = $('textarea').val();
+        const inputTweet = $('textarea').val().trim();
         const tweetLength = 140;
         
-        if (newTweetLength > tweetLength) {
+        if (inputTweet.length > tweetLength) {
           $('.error').text('This tweet is too long. Your thoughts must be portrayed within 140 characters!');
           $errorMessage.slideDown(600);
           setTimeout(() => { $errorMessage.slideUp(600) }, 5000);
-        } else if (emptyTweet === '') {
-          $('.error').text('Empty? Did you mis-click...you can\'t tweet a empty thought!');
+        } else if (inputTweet === '') {
+          $('.error').text('Empty? Did you mis-click...you can\'t tweet an empty thought!');
           $errorMessage.slideDown(600);
           setTimeout(() => { $errorMessage.slideUp(600) }, 5000);
         } else {
